@@ -17,4 +17,6 @@ USER 1001
 
 RUN /tmp/scripts/assemble
 
+cat /tmp/jupyterlab-debug-*.log
+
 CMD [ "/opt/app-root/builder/run" ]
