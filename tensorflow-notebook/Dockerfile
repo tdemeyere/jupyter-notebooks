@@ -15,6 +15,7 @@ ENV XDG_CACHE_HOME=/opt/app-root/src/.cache
 
 USER 1001
 
-RUN /tmp/scripts/assemble
+RUN /tmp/scripts/assemble; \
+    cat /tmp/jupyterlab-debug-*.log
 
 CMD [ "/opt/app-root/builder/run" ]
