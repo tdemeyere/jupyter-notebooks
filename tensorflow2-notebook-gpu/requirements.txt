@@ -26,6 +26,6 @@ xlrd==1.2.*
 
 ### tensorflow-notebook
 
-tensorflow==2.1.*
+tensorflow-gpu==2.1.*
 keras==2.3.*
 jupyter-tensorboard==0.2.*
