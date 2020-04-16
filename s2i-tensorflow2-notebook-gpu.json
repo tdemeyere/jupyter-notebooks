@@ -6,9 +6,9 @@
             "kind": "ImageStream",
             "apiVersion": "image.openshift.io/v1",
             "metadata": {
-                "name": "s2i-tensorflow-notebook",
+                "name": "s2i-tensorflow2-notebook-gpu",
                 "labels": {
-                    "build": "s2i-tensorflow-notebook"
+                    "build": "s2i-tensorflow2-notebook-gpu"
                 }
             },
             "spec": {
@@ -21,9 +21,9 @@
             "kind": "BuildConfig",
             "apiVersion": "build.openshift.io/v1",
             "metadata": {
-                "name": "s2i-tensorflow-notebook-py36",
+                "name": "s2i-tensorflow2-notebook-gpu",
                 "labels": {
-                    "build": "s2i-tensorflow-notebook"
+                    "build": "s2i-tensorflow2-notebook-gpu-py36"
                 }
             },
             "spec": {
@@ -38,29 +38,29 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "https://github.com/jupyter-on-openshift/jupyter-notebooks",
-                        "ref": "2.5.1"
+                        "uri": "https://github.com/tdemeyere/jupyter-notebooks",
+                        "ref": "master"
                     },
-                    "contextDir": "tensorflow-notebook"
+                    "contextDir": "tensorflow2-notebook-gpu"
                 },
                 "strategy": {
                     "type": "Source",
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "s2i-minimal-notebook:3.6"
+                            "name": "s2i-minimal-notebook-gpu:3.6"
                         }
                     }
                 },
                 "output": {
                     "to": {
                         "kind": "ImageStreamTag",
-                        "name": "s2i-tensorflow-notebook:3.6"
+                        "name": "s2i-minimal-notebook-gpu:3.6"
                     }
                 },
                 "resources": {
                     "limits": {
-                        "memory": "1Gi"
+                        "memory": "2Gi"
                     }
                 }
             }
