@@ -55,7 +55,7 @@
                 "output": {
                     "to": {
                         "kind": "ImageStreamTag",
-                        "name": "s2i-minimal-notebook-gpu:3.6"
+                        "name": "s2i-tensorflow2-notebook-gpu:3.6"
                     }
                 },
                 "resources": {
