@@ -21,6 +21,7 @@ seaborn==0.9.*
 sqlalchemy==1.3.*
 statsmodels==0.10.*
 sympy==1.4.*
+uuid==1.30
 vincent==0.4.*
 xlrd==1.2.*
 
