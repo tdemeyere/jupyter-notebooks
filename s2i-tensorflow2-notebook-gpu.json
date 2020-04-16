@@ -23,7 +23,7 @@
             "metadata": {
                 "name": "s2i-tensorflow2-notebook-gpu",
                 "labels": {
-                    "build": "s2i-tensorflow2-notebook-gpu-py36"
+                    "build": "s2i-tensorflow2-notebook-gpu"
                 }
             },
             "spec": {
